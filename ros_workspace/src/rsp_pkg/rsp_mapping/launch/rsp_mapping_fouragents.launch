@@ -1,0 +1,85 @@
+<launch>
+
+    <!-- Load robot parameters -->
+    <arg name="rbt1_name" default="burger_1"/>
+  <arg name="rbt1_x_pos" default="0.5"/>
+  <arg name="rbt1_y_pos" default="3.0"/>
+  <arg name="rbt1_z_pos" default="0.0"/>
+    <arg name="rbt1_yaw" default="0.0"/>
+    <arg name="rbt2_name" default="burger_2"/>
+  <arg name="rbt2_x_pos" default="0.5"/>
+  <arg name="rbt2_y_pos" default="4.2"/>
+  <arg name="rbt2_z_pos" default="0.0"/>
+    <arg name="rbt2_yaw" default="0.0"/>
+    <arg name="rbt3_name" default="burger_3"/>
+  <arg name="rbt3_x_pos" default="1.7"/>
+  <arg name="rbt3_y_pos" default="3.0"/>
+  <arg name="rbt3_z_pos" default="0.0"/>
+    <arg name="rbt3_yaw" default="0.0"/>
+    <arg name="rbt4_name" default="burger_4"/>
+  <arg name="rbt4_x_pos" default="1.7"/>
+  <arg name="rbt4_y_pos" default="4.2"/>
+  <arg name="rbt4_z_pos" default="0.0"/>
+    <arg name="rbt4_yaw" default="0.0"/>
+
+    <!-- Load SLAM for four robots -->
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="$(arg rbt1_name)"/>
+    </include>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="$(arg rbt2_name)"/>
+    </include>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="$(arg rbt3_name)"/>
+    </include>
+    <include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3_slam.launch">
+        <arg name="ns" value="$(arg rbt4_name)"/>
+    </include>
+
+    <!-- Initial pose from four robots -->
+    <group ns="$(arg rbt1_name)/map_merge">
+        <param name="init_pose_x"   value="$(arg rbt1_x_pos)"/>
+        <param name="init_pose_y"   value="$(arg rbt1_y_pos)"/>
+        <param name="init_pose_z"   value="$(arg rbt1_z_pos)"/>
+        <param name="init_pose_yaw" value="$(arg rbt1_yaw)"  />
+    </group>
+    <group ns="$(arg rbt2_name)/map_merge">
+        <param name="init_pose_x"   value="$(arg rbt2_x_pos)"/>
+        <param name="init_pose_y"   value="$(arg rbt2_y_pos)"/>
+        <param name="init_pose_z"   value="$(arg rbt2_z_pos)"/>
+        <param name="init_pose_yaw" value="$(arg rbt2_yaw)"  />
+    </group>
+    <group ns="$(arg rbt3_name)/map_merge">
+        <param name="init_pose_x"   value="$(arg rbt3_x_pos)"/>
+        <param name="init_pose_y"   value="$(arg rbt3_y_pos)"/>
+        <param name="init_pose_z"   value="$(arg rbt3_z_pos)"/>
+        <param name="init_pose_yaw" value="$(arg rbt3_yaw)"  />
+    </group>
+    <group ns="$(arg rbt4_name)/map_merge">
+        <param name="init_pose_x"   value="$(arg rbt4_x_pos)"/>
+        <param name="init_pose_y"   value="$(arg rbt4_y_pos)"/>
+        <param name="init_pose_z"   value="$(arg rbt4_z_pos)"/>
+        <param name="init_pose_yaw" value="$(arg rbt4_yaw)"  />
+    </group>
+
+    <!-- Call multirobot_map_merge to merge multiple maps  -->
+    <node pkg="multirobot_map_merge" type="map_merge" respawn="false" name="map_merge">
+        <param name="robot_map_topic" value="map"/>
+        <param name="robot_namespace" value="burger"/>
+        <param name="merged_map_topic" value="merged_map"/>
+        <param name="world_frame" value="odom"/>
+        <param name="known_init_poses" value="true"/>
+        <param name="merging_rate" value="0.5"/>
+        <param name="discovery_rate" value="0.05"/>
+        <param name="estimation_rate" value="0.1"/>
+        <param name="estimation_confidence" value="1.0"/>
+    </node>
+
+    <!-- TF from map to burger/map  -->
+    <node pkg="tf" type="static_transform_publisher" name="world_to_$(arg rbt1_name)_tf_broadcaster"  args="0 0 0 0 0 0 /odom /$(arg rbt1_name)/map 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="world_to_$(arg rbt2_name)_tf_broadcaster" args="0 0 0 0 0 0 /odom /$(arg rbt2_name)/map 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="world_to_$(arg rbt3_name)_tf_broadcaster"  args="0 0 0 0 0 0 /odom /$(arg rbt3_name)/map 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="world_to_$(arg rbt4_name)_tf_broadcaster" args="0 0 0 0 0 0 /odom /$(arg rbt4_name)/map 100"/>
+    <node pkg="tf" type="static_transform_publisher" name="world_to_merged_map_tf_broadcaster" args="0 0 0 0 0 0 /odom /merged_map 100"/>
+
+</launch>

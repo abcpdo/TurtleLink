@@ -1,0 +1,8 @@
+prefix=/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/gazebo_ros_link_attacher
+
+Name: gazebo_ros_link_attacher
+Description: Description of gazebo_ros_link_attacher
+Version: 0.0.0
+Cflags: -I/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/gazebo_ros_link_attacher/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

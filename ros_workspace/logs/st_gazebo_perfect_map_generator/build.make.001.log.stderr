@@ -1,0 +1,203 @@
+In file included from [01m[K/usr/include/c++/5/mutex:35:0[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/mutex.h:33[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/time.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/time.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/bits/c++0x_warning.h:32:2:[m[K [01;31m[Kerror: [m[K#error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+[01;32m[K  ^[m[K
+In file included from [01m[K/usr/include/c++/5/mutex:35:0[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/mutex.h:33[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/vector2d.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/vector2d.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/bits/c++0x_warning.h:32:2:[m[K [01;31m[Kerror: [m[K#error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+[01;32m[K  ^[m[K
+In file included from [01m[K/usr/include/c++/5/mutex:35:0[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/mutex.h:33[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/collision_map_request.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/collision_map_request.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/bits/c++0x_warning.h:32:2:[m[K [01;31m[Kerror: [m[K#error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+[01;32m[K  ^[m[K
+In file included from [01m[K/usr/include/c++/5/mutex:35:0[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/mutex.h:33[m[K,
+                 from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/header.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/header.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/bits/c++0x_warning.h:32:2:[m[K [01;31m[Kerror: [m[K#error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+[01;32m[K  ^[m[K
+In file included from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/time.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/time.pb.cc:4[m[K:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:58:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kmutex[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   std::mutex mu_;
+[01;32m[K        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Lock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:51:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Lock() { mu_.lock(); }
+[01;32m[K                 ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Unlock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:52:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Unlock() { mu_.unlock(); }
+[01;32m[K                   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:61:7:[m[K [01;31m[Kerror: [m[Kexpected nested-name-specifier before ‘[01m[KMutex[m[K’
+ using Mutex = WrappedMutex;
+[01;32m[K       ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:66:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLock(Mutex *mu) : mu_(mu) { this->mu_->Lock(); }
+[01;32m[K                            ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:69:3:[m[K [01;31m[Kerror: [m[K‘[01m[KMutex[m[K’ does not name a type
+   Mutex *const mu_;
+[01;32m[K   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In destructor ‘[01m[Kgoogle::protobuf::internal::MutexLock::~MutexLock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:67:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass google::protobuf::internal::MutexLock[m[K’ has no member named ‘[01m[Kmu_[m[K’
+   ~MutexLock() { this->mu_->Unlock(); }
+[01;32m[K                        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:80:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLockMaybe(Mutex *mu) :
+[01;32m[K                                 ^[m[K
+In file included from [01m[K/usr/local/include/google/protobuf/arena.h:48:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/time.pb.h:23[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/time.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected declaration before end of line
+In file included from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/header.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/header.pb.cc:4[m[K:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:58:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kmutex[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   std::mutex mu_;
+[01;32m[K        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Lock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:51:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Lock() { mu_.lock(); }
+[01;32m[K                 ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Unlock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:52:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Unlock() { mu_.unlock(); }
+[01;32m[K                   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:61:7:[m[K [01;31m[Kerror: [m[Kexpected nested-name-specifier before ‘[01m[KMutex[m[K’
+ using Mutex = WrappedMutex;
+[01;32m[K       ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:66:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLock(Mutex *mu) : mu_(mu) { this->mu_->Lock(); }
+[01;32m[K                            ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:69:3:[m[K [01;31m[Kerror: [m[K‘[01m[KMutex[m[K’ does not name a type
+   Mutex *const mu_;
+[01;32m[K   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In destructor ‘[01m[Kgoogle::protobuf::internal::MutexLock::~MutexLock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:67:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass google::protobuf::internal::MutexLock[m[K’ has no member named ‘[01m[Kmu_[m[K’
+   ~MutexLock() { this->mu_->Unlock(); }
+[01;32m[K                        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:80:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLockMaybe(Mutex *mu) :
+[01;32m[K                                 ^[m[K
+In file included from [01m[K/usr/local/include/google/protobuf/arena.h:48:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/header.pb.h:23[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/header.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected declaration before end of line
+make[2]: *** [gazebo_msgs/CMakeFiles/collision_map_creator_msgs.dir/time.pb.cc.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [gazebo_msgs/CMakeFiles/collision_map_creator_msgs.dir/header.pb.cc.o] Error 1
+In file included from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/vector2d.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/vector2d.pb.cc:4[m[K:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:58:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kmutex[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   std::mutex mu_;
+[01;32m[K        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Lock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:51:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Lock() { mu_.lock(); }
+[01;32m[K                 ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Unlock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:52:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Unlock() { mu_.unlock(); }
+[01;32m[K                   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:61:7:[m[K [01;31m[Kerror: [m[Kexpected nested-name-specifier before ‘[01m[KMutex[m[K’
+ using Mutex = WrappedMutex;
+[01;32m[K       ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:66:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLock(Mutex *mu) : mu_(mu) { this->mu_->Lock(); }
+[01;32m[K                            ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:69:3:[m[K [01;31m[Kerror: [m[K‘[01m[KMutex[m[K’ does not name a type
+   Mutex *const mu_;
+[01;32m[K   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In destructor ‘[01m[Kgoogle::protobuf::internal::MutexLock::~MutexLock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:67:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass google::protobuf::internal::MutexLock[m[K’ has no member named ‘[01m[Kmu_[m[K’
+   ~MutexLock() { this->mu_->Unlock(); }
+[01;32m[K                        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:80:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLockMaybe(Mutex *mu) :
+[01;32m[K                                 ^[m[K
+In file included from [01m[K/usr/local/include/google/protobuf/arena.h:48:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/vector2d.pb.h:23[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/vector2d.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected declaration before end of line
+In file included from [01m[K/usr/local/include/google/protobuf/stubs/common.h:52:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/collision_map_request.pb.h:9[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/collision_map_request.pb.cc:4[m[K:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:58:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kmutex[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   std::mutex mu_;
+[01;32m[K        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Lock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:51:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Lock() { mu_.lock(); }
+[01;32m[K                 ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In member function ‘[01m[Kvoid google::protobuf::internal::WrappedMutex::Unlock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:52:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmu_[m[K’ was not declared in this scope
+   void Unlock() { mu_.unlock(); }
+[01;32m[K                   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:61:7:[m[K [01;31m[Kerror: [m[Kexpected nested-name-specifier before ‘[01m[KMutex[m[K’
+ using Mutex = WrappedMutex;
+[01;32m[K       ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:66:28:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLock(Mutex *mu) : mu_(mu) { this->mu_->Lock(); }
+[01;32m[K                            ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:69:3:[m[K [01;31m[Kerror: [m[K‘[01m[KMutex[m[K’ does not name a type
+   Mutex *const mu_;
+[01;32m[K   ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K In destructor ‘[01m[Kgoogle::protobuf::internal::MutexLock::~MutexLock()[m[K’:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:67:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass google::protobuf::internal::MutexLock[m[K’ has no member named ‘[01m[Kmu_[m[K’
+   ~MutexLock() { this->mu_->Unlock(); }
+[01;32m[K                        ^[m[K
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:[m[K At global scope:
+[01m[K/usr/local/include/google/protobuf/stubs/mutex.h:80:33:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K*[m[K’ token
+   explicit MutexLockMaybe(Mutex *mu) :
+[01;32m[K                                 ^[m[K
+In file included from [01m[K/usr/local/include/google/protobuf/arena.h:48:0[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/collision_map_request.pb.h:23[m[K,
+                 from [01m[K/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/build/st_gazebo_perfect_map_generator/gazebo_msgs/collision_map_request.pb.cc:4[m[K:
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before end of line
+[01m[K/usr/include/c++/5/typeinfo:39:37:[m[K [01;31m[Kerror: [m[Kexpected declaration before end of line
+make[2]: *** [gazebo_msgs/CMakeFiles/collision_map_creator_msgs.dir/vector2d.pb.cc.o] Error 1
+make[2]: *** [gazebo_msgs/CMakeFiles/collision_map_creator_msgs.dir/collision_map_request.pb.cc.o] Error 1
+make[1]: *** [gazebo_msgs/CMakeFiles/collision_map_creator_msgs.dir/all] Error 2
+make: *** [all] Error 2

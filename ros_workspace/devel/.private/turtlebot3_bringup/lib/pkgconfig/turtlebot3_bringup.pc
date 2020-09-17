@@ -1,0 +1,8 @@
+prefix=/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/turtlebot3_bringup
+
+Name: turtlebot3_bringup
+Description: Description of turtlebot3_bringup
+Version: 1.2.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs diagnostic_msgs turtlebot3_msgs

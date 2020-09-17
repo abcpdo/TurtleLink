@@ -1,0 +1,9 @@
+<library path="lib/librsp_rviz">
+  <class name="MultirobotControlPanel"
+         type="rsp_rviz::MultirobotControlPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      GUI control for RSP multi-robot navigation.
+    </description>
+  </class>
+</library>

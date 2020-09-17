@@ -1,0 +1,8 @@
+prefix=/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/install
+
+Name: rsp_pathplanning
+Description: Description of rsp_pathplanning
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

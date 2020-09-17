@@ -1,0 +1,10 @@
+<launch>
+  <arg name="model" default="burger"/>
+  <param name="model" value="$(arg model)"/>
+
+  <!-- turtlebot3_teleop_key already has its own built in velocity smoother -->
+  <node pkg="rsp_usercontrol" type="rsp_teleop_joy_node" name="rsp_teleop_joystick"  output="screen">
+  </node>
+  <node pkg="joy" type="joy_node" name="joy_node"  output="screen">
+  </node>
+</launch>

@@ -1,0 +1,98 @@
+<launch>
+
+  <!-- Load robot parameters -->
+  <arg name="model" default="burger"/>
+  <arg name="rbt1_name" default="burger_1"/>
+  <arg name="rbt1_x_pos" default="0.5"/>
+  <arg name="rbt1_y_pos" default="3.0"/>
+  <arg name="rbt1_z_pos" default="0.0"/>
+  <arg name="rbt2_name" default="burger_2"/>
+  <arg name="rbt2_x_pos" default="0.5"/>
+  <arg name="rbt2_y_pos" default="4.2"/>
+  <arg name="rbt2_z_pos" default="0.0"/>
+  <arg name="rbt3_name" default="burger_3"/>
+  <arg name="rbt3_x_pos" default="1.7"/>
+  <arg name="rbt3_y_pos" default="3.0"/>
+  <arg name="rbt3_z_pos" default="0.0"/>
+  <arg name="rbt4_name" default="burger_4"/>
+  <arg name="rbt4_x_pos" default="1.7"/>
+  <arg name="rbt4_y_pos" default="4.2"/>
+  <arg name="rbt4_z_pos" default="0.0"/>
+
+
+  <!-- Load turtlebot3 bringup -->
+  <include file="$(find rsp_bringup)/launch/rsp_bringup.launch" >
+    <arg name="model" value="$(arg model)"/>
+    <arg name="world_file_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/>
+  </include>
+
+  <!-- Load turtlebot3-01 -->
+  <group ns="$(arg rbt1_name)">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg rbt1_name)"/>
+    </node>
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_1 -x $(arg rbt1_x_pos) -y $(arg rbt1_y_pos) -z $(arg rbt1_z_pos) -param robot_description" />
+  </group>
+  <!-- Load turtlebot3-02 -->
+  <group ns="$(arg rbt2_name)">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg rbt2_name)"/>
+    </node>
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_2 -x $(arg rbt2_x_pos) -y $(arg rbt2_y_pos) -z $(arg rbt2_z_pos) -param robot_description" />
+  </group>
+  <!-- Load turtlebot3-03 -->
+  <group ns="$(arg rbt3_name)">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg rbt3_name)"/>
+    </node>
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_3 -x $(arg rbt3_x_pos) -y $(arg rbt3_y_pos) -z $(arg rbt3_z_pos) -param robot_description" />
+  </group>
+  <!-- Load turtlebot3-04 -->
+  <group ns="$(arg rbt4_name)">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg rbt4_name)"/>
+    </node>
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_4 -x $(arg rbt4_x_pos) -y $(arg rbt4_y_pos) -z $(arg rbt4_z_pos) -param robot_description" />
+
+  </group>
+
+  <!-- Adding additional static tf from odom to robot/odom -->
+  <node pkg="tf" type="static_transform_publisher" name="tf_odom_to_rbt1" args="0 0 0 0 0 0 odom $(arg rbt1_name)/odom 1000"/>
+  <node pkg="tf" type="static_transform_publisher" name="tf_odom_to_rbt2" args="0 0 0 0 0 0 odom $(arg rbt2_name)/odom 1000"/>
+  <node pkg="tf" type="static_transform_publisher" name="tf_odom_to_rbt3" args="0 0 0 0 0 0 odom $(arg rbt3_name)/odom 1000"/>
+  <node pkg="tf" type="static_transform_publisher" name="tf_odom_to_rbt4" args="0 0 0 0 0 0 odom $(arg rbt4_name)/odom 1000"/>
+
+
+  <!-- set some initial parameters -->
+  <rosparam>  
+    robot_count: 4
+    robot_gap: 0.5
+    robot_configuration: 0
+  </rosparam>
+
+
+  <!-- Launch Rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rsp_bringup)/rviz/rsp_house_fouragents.rviz" output="screen"/>
+
+  <!-- launch reconfiguration service -->
+  <node pkg="rsp_navigation" type="rsp_reconfiguration_node" name="reconfig_service" output="screen"/>
+
+  <!-- launch velocity service -->
+  <node pkg="rsp_navigation" type="rsp_velocity_assignment_node" name="vel_assignment_service"/>
+
+  <!-- launch movement service -->
+  <node pkg="rsp_navigation" type="rsp_go_to_point_server_node" name="movement_service"/>
+
+  <!-- launch fat movement service -->
+  <!-- <node pkg="rsp_navigation" type="rsp_go_to_point_server_fat_node" name="fat_movement_service"/> -->
+
+
+</launch>

@@ -1,0 +1,18 @@
+<launch>
+    <include file="$(find rsp_bringup)/launch/rsp_bringup.launch">
+    </include>
+
+
+    <rosparam>  
+        robot_count: 2
+        robot_gap: 0.5
+        robot_configuration: 1
+    </rosparam>
+
+    <node pkg="rsp_usercontrol" type="rsp_teleop_key" name="rsp_teleop_keyboard"  output="screen" launch-prefix="xterm -e">
+    </node>
+
+    <node pkg="rsp_navigation" type="rsp_velocity_assignment_node" name="vel_assignment">
+    </node>
+
+</launch>

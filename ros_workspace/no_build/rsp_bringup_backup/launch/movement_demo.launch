@@ -1,0 +1,80 @@
+<launch>
+    <include file="$(find rsp_bringup)/launch/rsp_bringup.launch">
+    </include>
+
+    <arg name="model" default="burger"/>
+    <arg name="rbt1_name" default="burger_1"/>
+    <arg name="rbt1_y_pos" default="1.5"/>
+    <arg name="rbt1_x_pos" default="0.0"/>
+    <arg name="rbt1_z_pos" default="0.0"/>
+    <arg name="rbt2_name" default="burger_2"/>
+    <arg name="rbt2_y_pos" default="1.0"/>
+    <arg name="rbt2_x_pos" default="0.0"/>
+    <arg name="rbt2_z_pos" default="0.0"/>
+    <arg name="rbt3_name" default="burger_3"/>
+    <arg name="rbt3_y_pos" default="0.5"/>
+    <arg name="rbt3_x_pos" default="0.0"/>
+    <arg name="rbt3_z_pos" default="0.0"/>
+    <arg name="rbt4_name" default="burger_4"/>
+    <arg name="rbt4_y_pos" default="0.0"/>
+    <arg name="rbt4_x_pos" default="0.0"/>
+    <arg name="rbt4_z_pos" default="0.0"/>
+
+
+    <group ns="$(arg rbt1_name)">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="50.0" />
+        <param name="tf_prefix" value="$(arg rbt1_name)"/>
+        </node>
+        <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_1 -x $(arg rbt1_x_pos) -y $(arg rbt1_y_pos) -z $(arg rbt1_z_pos) -param robot_description" />
+    </group>
+    <!-- Load turtlebot3-02 -->
+    <group ns="$(arg rbt2_name)">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="50.0" />
+        <param name="tf_prefix" value="$(arg rbt2_name)"/>
+        </node>
+        <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_2 -x $(arg rbt2_x_pos) -y $(arg rbt2_y_pos) -z $(arg rbt2_z_pos) -param robot_description" />
+    </group>
+    <!-- Load turtlebot3-03 -->
+    <group ns="$(arg rbt3_name)">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="50.0" />
+        <param name="tf_prefix" value="$(arg rbt3_name)"/>
+        </node>
+        <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_3 -x $(arg rbt3_x_pos) -y $(arg rbt3_y_pos) -z $(arg rbt3_z_pos) -param robot_description" />
+    </group>
+    <!-- Load turtlebot3-04 -->
+    <group ns="$(arg rbt4_name)">
+        <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="50.0" />
+        <param name="tf_prefix" value="$(arg rbt4_name)"/>
+        </node>
+        <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_4 -x $(arg rbt4_x_pos) -y $(arg rbt4_y_pos) -z $(arg rbt4_z_pos) -param robot_description" />
+
+    </group>
+
+
+
+
+    <rosparam>  
+        robot_count: 4
+        robot_gap: 0.5
+        robot_configuration: 1
+    </rosparam>
+
+    <node pkg="rsp_usercontrol" type="rsp_teleop_key" name="rsp_teleop_keyboard"  output="screen" launch-prefix="xterm -e">
+    </node>
+
+    <node pkg="rsp_navigation" type="rsp_velocity_assignment_node" name="vel_assignment">
+    </node>
+
+    <!-- Launch Rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rsp_bringup)/rviz/rsp_turtlebot3_rviz.rviz" output="screen"/>
+
+
+</launch>

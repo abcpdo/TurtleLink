@@ -1,0 +1,1 @@
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/turtlebot3_example/share/gennodejs/ros/turtlebot3_example/msg/_index.js

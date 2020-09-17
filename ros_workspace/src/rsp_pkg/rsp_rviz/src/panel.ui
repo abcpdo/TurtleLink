@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MultirobotControlForm</class>
+ <widget class="QWidget" name="MultirobotControlForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>368</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+        <!-- <property name="title">
+            <string>RSP Multirobot Contorl System</string>
+        </property>
+        <widget class="QGroupBox" name="group_mode"> -->
+        <widget class="QGroupBox" name="group_mode">
+            <property name="title">
+                <string>Multirobot Main Control</string>
+            </property>
+            <layout class="QHBoxLayout" name="group_activation">
+                <item>
+                    <widget class="QPushButton" name="button_on">
+                        <property name="text">
+                            <string>START</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="button_reset">
+                        <property name="text">
+                            <string>RESET</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="button_off">
+                        <property name="text">
+                            <string>STOP</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </item>
+
+   <item>
+        <widget class="QGroupBox" name="group_mode">
+            <property name="title">
+                <string>Robot Spawning</string>
+            </property>
+        
+            <layout class="QHBoxLayout" name="group_activation">
+                <item>
+                    <widget class="QLabel" name="label_id">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>ID:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                   <widget class="QLineEdit" name="lineedit_spawn_id">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="label_01">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>pos_x:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                   <widget class="QLineEdit" name="lineedit_spawn_xpos">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="label_02">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>pos_y:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                   <widget class="QLineEdit" name="lineedit_spawn_ypos">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="button_spawn">
+                        <property name="text">
+                            <string>Spawn Robot</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </item>
+
+   <item>
+        <widget class="QGroupBox" name="group_mode">
+            <property name="title">
+                <string>Robot Removing</string>
+            </property>
+        
+            <layout class="QHBoxLayout" name="group_activation">
+                <item>
+                    <widget class="QLabel" name="label_00">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>Robot ID:</string>
+                        </property>
+                    </widget>
+                </item>
+               <item>
+                   <widget class="QLineEdit" name="lineedit_destroy_id">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="button_destroy">
+                        <property name="text">
+                            <string>Remove Robot</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </item>
+
+   <item>
+        <widget class="QGroupBox" name="group_mode">
+            <property name="title">
+                <string>System destination position</string>
+            </property>
+        
+            <layout class="QHBoxLayout" name="group_activation">
+                <item>
+                    <widget class="QLabel" name="label_03">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>robot ID:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                   <widget class="QLineEdit" name="lineedit_goal_rbtID">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="label_03">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>pos_x:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                   <widget class="QLineEdit" name="lineedit_goal_xpos">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="label_04">
+                        <property name="styleSheet">
+                            <string notr="true">QLabel {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }</string>
+                        </property>
+                        <property name="text">
+                            <string>pos_y:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                   <widget class="QLineEdit" name="lineedit_goal_ypos">
+                        <property name="styleSheet">
+                        <string>color: black;
+                            border: 1px solid black;
+                            background: white;
+                            selection-background-color: lightgray;</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="button_setgoal">
+                        <property name="text">
+                            <string>Navigate</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </item>
+
+
+   <item>
+    <widget class="QGroupBox" name="group_mode">
+     <property name="title">
+      <string>System Cofigurations</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="button_separate">
+        <property name="text">
+         <string>Separated</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_align">
+        <property name="text">
+         <string>Aligned</string>
+        </property>
+       </widget>
+      </item>
+      <!-- <item>
+       <widget class="QPushButton" name="button_hlink">
+        <property name="text">
+         <string>H-Linked</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_vlink">
+        <property name="text">
+         <string>V-Linked</string>
+        </property>
+       </widget>
+      </item> -->
+     </layout>
+    </widget>
+   </item>
+
+    <item>
+    <widget class="QGroupBox" name="monitor">
+     <property name="title">
+      <string>Robot Monitor</string>
+     </property>
+     </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="group_status">
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QGridLayout" name="layout_status">
+
+      <item row="1" column="1">
+       <widget class="Line" name="line_a">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="Line" name="line_b">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="Line" name="line_c">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="Line" name="line_s">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_status_pos">
+        <property name="text">
+         <string>Position x (m)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="rbt1_pos_x">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="rbt2_pos_x">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="rbt3_pos_x">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="rbt4_pos_x">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_status_cur">
+        <property name="text">
+         <string>Position y (m)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="rbt1_pos_y">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="rbt2_pos_y">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="rbt3_pos_y">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLabel" name="rbt4_pos_y">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+
+
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_status_theta">
+        <property name="text">
+         <string>Heading (deg)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="rbt1_heading">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="rbt2_heading">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="rbt3_heading">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="4">
+       <widget class="QLabel" name="rbt4_heading">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string>--</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+
+
+
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Robot ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_fa">
+        <property name="text">
+         <string>burger_1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_fb">
+        <property name="text">
+         <string>burger_2</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+
+     <item row="0" column="3">
+       <widget class="QLabel" name="label_fc">
+        <property name="text">
+         <string>burger_3</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_s">
+        <property name="text">
+         <string>burger_4</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+prefix=/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/install
+
+Name: st_gazebo_perfect_map_generator
+Description: Description of st_gazebo_perfect_map_generator
+Version: 0.4.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

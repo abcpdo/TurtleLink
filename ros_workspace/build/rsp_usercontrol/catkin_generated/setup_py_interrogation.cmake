@@ -1,0 +1,6 @@
+set(rsp_usercontrol_SETUP_PY_VERSION "0.0.0")
+set(rsp_usercontrol_SETUP_PY_SCRIPTS "")
+set(rsp_usercontrol_SETUP_PY_PACKAGES "rsp_usercontrol")
+set(rsp_usercontrol_SETUP_PY_PACKAGE_DIRS "src/rsp_usercontrol")
+set(rsp_usercontrol_SETUP_PY_MODULES "")
+set(rsp_usercontrol_SETUP_PY_MODULE_DIRS "")

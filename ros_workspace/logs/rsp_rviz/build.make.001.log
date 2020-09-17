@@ -1,0 +1,6 @@
+[ 12%] [34m[1mAutomatic moc and uic for target rsp_command_node[0m
+[ 12%] Built target rsp_command_node_automoc
+[ 25%] [34m[1mAutomatic moc and uic for target rsp_rviz[0m
+[ 25%] Built target rsp_rviz_automoc
+[ 62%] Built target rsp_rviz
+[100%] Built target rsp_command_node

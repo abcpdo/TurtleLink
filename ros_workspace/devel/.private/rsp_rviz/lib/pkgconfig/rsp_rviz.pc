@@ -1,0 +1,8 @@
+prefix=/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/rsp_rviz
+
+Name: rsp_rviz
+Description: Description of rsp_rviz
+Version: 1.0.0
+Cflags: -I/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/include
+Libs: -L${prefix}/lib 
+Requires: 

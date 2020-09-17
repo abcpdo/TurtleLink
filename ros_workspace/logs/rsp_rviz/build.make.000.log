@@ -1,0 +1,26 @@
+[35m[1mScanning dependencies of target rsp_command_node_automoc[0m
+[35m[1mScanning dependencies of target rsp_rviz_automoc[0m
+[ 12%] [34m[1mAutomatic moc and uic for target rsp_rviz[0m
+[ 25%] [34m[1mAutomatic moc and uic for target rsp_command_node[0m
+[34m[1mGenerating rsp_rviz.moc[0m
+[ 25%] Built target rsp_command_node_automoc
+[34m[1mGenerating ui_panel.h[0m
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_mode' (QGroupBox) is already in use, defaulting to 'group_mode1'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_activation' (QHBoxLayout) is already in use, defaulting to 'group_activation1'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_mode' (QGroupBox) is already in use, defaulting to 'group_mode2'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_activation' (QHBoxLayout) is already in use, defaulting to 'group_activation2'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_mode' (QGroupBox) is already in use, defaulting to 'group_mode3'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_activation' (QHBoxLayout) is already in use, defaulting to 'group_activation3'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'label_03' (QLabel) is already in use, defaulting to 'label_031'.
+/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/rsp_pkg/rsp_rviz/src/panel.ui: Warning: The name 'group_mode' (QGroupBox) is already in use, defaulting to 'group_mode4'.
+[ 25%] Built target rsp_rviz_automoc
+[35m[1mScanning dependencies of target rsp_rviz[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/rsp_rviz.dir/rsp_rviz_automoc.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rsp_rviz.dir/src/rsp_rviz.cpp.o[0m
+[ 62%] [32m[1mLinking CXX shared library /home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/rsp_rviz/lib/librsp_rviz.so[0m
+[ 62%] Built target rsp_rviz
+[35m[1mScanning dependencies of target rsp_command_node[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/rsp_command_node.dir/rsp_command_node_automoc.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/rsp_command_node.dir/src/rsp_command_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/rsp_rviz/lib/rsp_rviz/rsp_command_node[0m
+[100%] Built target rsp_command_node

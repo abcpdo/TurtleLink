@@ -1,0 +1,10 @@
+[35m[1mScanning dependencies of target rsp_usercontrol[0m
+[35m[1mScanning dependencies of target rsp_usercontrol_xacro_generated_to_devel_space_[0m
+[  0%] Built target rsp_usercontrol_xacro_generated_to_devel_space_
+[ 25%] [32mBuilding CXX object CMakeFiles/rsp_usercontrol.dir/src/rsp_teleop_joy.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library /home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/rsp_usercontrol/lib/librsp_usercontrol.so[0m
+[ 50%] Built target rsp_usercontrol
+[35m[1mScanning dependencies of target rsp_teleop_joy_node[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/rsp_teleop_joy_node.dir/src/rsp_teleop_joy_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/rsp_usercontrol/lib/rsp_usercontrol/rsp_teleop_joy_node[0m
+[100%] Built target rsp_teleop_joy_node

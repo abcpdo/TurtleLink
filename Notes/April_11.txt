@@ -1,0 +1,59 @@
+April 14, 2020 notes:
+
+Project Architecture:
+
+    Parameters:
+        robot_count
+        robot_names
+        anchor_robot_name
+        combined_flag
+        robot_description
+
+    Packages:
+        rsp_bringup
+            Description: Launches gazebo / Rviz / tele-operation(from keyboard) from user (Joystick), stores all the urdf and robot_description, robot state publisher
+            Launch files:
+                rsp_turtlebot3_bringup.launch 
+        rsp_navigation (Not implemented yet)
+            Nodes:
+                recofiguration_node
+                    service argument: “robot_name_1 robot_name_2 combine/split”
+                    Valid actions include: split / join / space (move with certain spacing) 
+                    Call navigation_node 
+                    Sets rosparam flag
+                    Create static tf between two robots to form/break up links (then we won’t use rsp_pathplanning if this is working)
+                multirobot_control_node: (Not implemented yet)
+                    input
+                    service msgs input: “robot_name configuration_ID posx posy rotz” 
+                    output: service
+                    Moves multiple robots.
+                navigation_node: (Not implemented yet)
+                    input topics: nothing!
+                    service msgs input: “robot_name posx posy rotz” 
+                    uses: turtlebot_3 move_base, need to change so that it matches the argument we use.
+                    output topics: nothing!
+                    Moves 1 robot.
+            Launch files:
+
+        rsp_pathplanning (Not implemented yet)
+            Nodes: 
+                rsp_pathplanning  
+                    Description: Publishes to the navigation_node and multirobot_control_node in rsp_navigation package, receiving inputs from rsp_user_control (if robot is voltron’d)
+                    How to optimize the path: ie. reconfiguring robots, going around obstacles. 
+                rsp_user_control  
+                    Nodes:
+                        rsp_teleop_key:
+                        rsp_teleop_joy: (Not implemented yet)
+                        gui_control_node (Not implemented yet)
+                            rviz plugin??
+                        control_node
+                            Gets user input and executes various functionality. Expect command line style functionality (user publish to topic?) 
+                                “move x y”
+                                “combine robot1 robot2”
+                                “move robot1 ”
+                                “Move robot_group x y theta” (access rsp_planning)                  
+                    Launch files:
+                        rsp_turtlebot3_teleop_key.launch
+
+
+

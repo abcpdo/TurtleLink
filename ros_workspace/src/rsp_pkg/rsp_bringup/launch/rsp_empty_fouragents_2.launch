@@ -1,0 +1,45 @@
+<launch>
+
+  <!-- Load robot parameters -->
+  <arg name="model" default="burger"/>
+  <arg name="rbt1_name" default="burger_1"/>
+  <arg name="rbt1_x_pos" default="0.0"/>
+  <arg name="rbt1_y_pos" default="0.0"/>
+  <arg name="rbt1_z_pos" default="0.0"/>
+  <arg name="rbt2_name" default="burger_2"/>
+  <arg name="rbt2_x_pos" default="0.0"/>
+  <arg name="rbt2_y_pos" default="-0.5"/>
+  <arg name="rbt2_z_pos" default="0.0"/>
+  <arg name="rbt3_name" default="burger_3"/>
+  <arg name="rbt3_x_pos" default="0.5"/>
+  <arg name="rbt3_y_pos" default="0.0"/>
+  <arg name="rbt3_z_pos" default="0.0"/>
+  <arg name="rbt4_name" default="burger_4"/>
+  <arg name="rbt4_x_pos" default="0.5"/>
+  <arg name="rbt4_y_pos" default="-0.5"/>
+  <arg name="rbt4_z_pos" default="0.0"/>
+
+
+  <!-- Load turtlebot3 bringup -->
+  <include file="$(find rsp_bringup)/launch/rsp_bringup.launch">
+    <param name="model" value="$(arg model)"/>
+  </include>
+
+  <!-- Load turtlebot3-01 -->
+  <group ns="$(arg rbt1_name)">
+    <param name="robot_description" command="$(find xacro)/xacro --inorder $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro" />
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model $(arg model)_1 -x $(arg rbt1_x_pos) -y $(arg rbt1_y_pos) -z $(arg rbt1_z_pos) -param robot_description" />
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg rbt1_name)"/>
+    </node>
+  </group>
+
+
+  <!-- Adding additional static tf from odom to robot/odom -->
+  <node pkg="tf" type="static_transform_publisher" name="tf_odom_to_rbt1" args="0 0 0 0 0 0 odom $(arg rbt1_name)/odom 1000"/>
+
+  <!-- Launch Rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rsp_bringup)/rviz/rsp_empty_fouragents.rviz"/>
+
+</launch>

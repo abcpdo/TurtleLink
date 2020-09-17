@@ -1,0 +1,8 @@
+prefix=/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/devel/.private/turtlebot3_slam
+
+Name: turtlebot3_slam
+Description: Description of turtlebot3_slam
+Version: 1.2.3
+Cflags: -I/home/kaiyu/Dropbox/College/Grad/RSP/git_repos/530_707_independent_project/ros_workspace/src/turtlebot3_pkgs/turtlebot3_slam/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs
